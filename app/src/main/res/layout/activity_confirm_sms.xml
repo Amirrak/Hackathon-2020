@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    tools:context=".ConfirmSmsActivity">
+
+
+  <ImageView
+      android:id="@+id/logo"
+      android:layout_width="283dp"
+      android:layout_height="96dp"
+      android:src="@drawable/ic_bms"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.2"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.00999999"
+      android:transitionName="logoTransition"/>
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guidelineLeft"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintGuide_begin="40dp"
+      android:orientation="vertical" />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guidelineRight"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintGuide_end="40dp"
+      android:orientation="vertical" />
+
+  <EditText
+      android:id="@+id/inputUser"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:inputType="phone"
+      android:textColor="@color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+      app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.56"
+      android:transitionName="inputUserTransition"/>
+
+
+  <Button
+      android:id="@+id/sendButton"
+      android:layout_width="200sp"
+      android:layout_height="wrap_content"
+      android:textAllCaps="false"
+      android:text="envoyer"
+      android:transitionName="sendButtonTransition"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+      app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.65"/>
+
+  <TextView
+      android:id="@+id/indicationText"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/lato_light"
+      android:gravity="center_horizontal|center_vertical"
+      android:text="Entrez le code recu par SMS !"
+      android:textColor="@color/white"
+      android:textSize="25sp"
+      android:textStyle="normal"
+      app:layout_constraintBottom_toTopOf="@id/inputUser"
+      app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+      app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+      app:layout_constraintTop_toTopOf="@id/stepText"
+      android:transitionName="indicationTextTransition"/>
+
+  <TextView
+      android:id="@+id/stepText"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/lato_black"
+      android:gravity="center"
+      android:text="Verification"
+      android:textColor="@color/white"
+      android:textSize="30sp"
+      android:textStyle="normal"
+      app:layout_constraintBottom_toTopOf="@+id/inputUser"
+      app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+      app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.64"
+      android:transitionName="stepTextTransition"/>
+
+  <ImageView
+      android:layout_width="94dp"
+      android:layout_height="99dp"
+      android:src="@drawable/ic_sms"
+      app:layout_constraintBottom_toTopOf="@+id/stepText"
+      app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+      app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+      app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+  <ProgressBar
+      android:id="@+id/spinProgress"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="30sp"
+      app:layout_constraintTop_toBottomOf="@id/sendButton"
+      app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+      app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+      android:visibility="invisible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

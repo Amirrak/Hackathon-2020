@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "810562829455",
+    "project_id": "bms-electric",
+    "storage_bucket": "bms-electric.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810562829455:android:ae01a3fa38185e3ee404fa",
+        "android_client_info": {
+          "package_name": "dz.amirak.bmselectric"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "810562829455-kkgq2slihibnooc37ekve03u4k4l10dk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwuRWHK164w1AzSY4r6MYCJ4giNrnTQ-w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "810562829455-kkgq2slihibnooc37ekve03u4k4l10dk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main">
+
+    <TextView
+        android:id="@+id/titreTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Nouveau Magasin"
+        android:textSize="40dp"/>
+
+    <EditText
+        android:id="@+id/storeName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/titreTop"
+        android:layout_alignLeft="@id/titreTop"
+        android:layout_below="@id/titreTop"
+        android:layout_marginTop="30dp"
+        android:hint="Nom du magasin"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/vendorName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/titreTop"
+        android:layout_alignLeft="@id/titreTop"
+        android:layout_below="@id/storeName"
+        android:layout_marginTop="20dp"
+        android:hint="Nom complet du proprietaire"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/phoneStore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/titreTop"
+        android:layout_alignLeft="@id/titreTop"
+        android:layout_below="@id/vendorName"
+        android:layout_marginTop="20dp"
+        android:hint="N°Tel du magasin"
+        android:maxLines="1"/>
+
+
+    <EditText
+        android:id="@+id/adresse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/titreTop"
+        android:layout_alignLeft="@id/titreTop"
+        android:layout_below="@id/phoneStore"
+        android:layout_marginTop="20dp"
+        android:hint="Adresse exacte du magasin"
+        android:maxLines="1"/>
+
+    <Spinner
+        android:id="@+id/typeStore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/titreTop"
+        android:layout_alignLeft="@id/titreTop"
+        android:layout_below="@id/adresse"
+        android:layout_marginTop="20dp"
+        android:entries="@array/typeStoreAct"/>
+
+    <Button
+        android:id="@id/sendButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/titreTop"
+        android:layout_alignLeft="@id/titreTop"
+        android:layout_above="@id/bottomNavBar"
+        android:text="Enregistrer"
+        android:layout_marginBottom="10dp"
+        android:textAllCaps="false" />
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapOSM"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignRight="@id/titreTop"
+        android:layout_alignLeft="@id/titreTop"
+        android:layout_below="@id/typeStore"
+        android:layout_above="@id/sendButton"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <ProgressBar
+        android:id="@+id/spinProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/currentPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_current_pos"
+        android:layout_alignBottom="@id/mapOSM"
+        android:layout_alignRight="@id/mapOSM"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottomNavBar"
+        app:menu="@menu/nav_menu"
+        android:spinnerMode="dialog"
+        app:labelVisibilityMode="unlabeled"/>
+
+</RelativeLayout>
